@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Prueba notificación</title>
+</head>
+<body>
+	<button type="button" onclick="notificar()" >Enviar notificación</button>
+
+	<script type="text/javascript">
+		document.addEventListener("DOMContentLoaded", function(){
+			if(!Notification){
+				alert("Las notificaciones no se soportan en tu navegador, bájate uno más nuevo");
+				return;
+			}
+			if(Notification.permission != "granted"){
+				Notification.requestPermission();
+			}
+		});
+
+		function notificar(){
+			if(Notification.permission !== "granted"){
+				Notification.requestPermission();
+			}else{
+				var notification = new Notification("Título de mi notificación",
+					{
+						icon: "https://cdn.pixabay.com/photo/2014/04/02/16/28/fire-307384_960_720.png",
+						body: "Este es el contenido de la notificación!!1!"
+					}
+				);
+				notification.onclick = function(){
+					window.open("https://pixabay.com/vectors/fire-flame-danger-burn-light-307384/");
+				}
+			}
+		}
+	</script>
+
+</body>
+</html>
