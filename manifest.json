@@ -1,22 +1,17 @@
 {
-    "name": "pigment",
-    "short_name": "pigment",
-    "description": "Pigment App color conversion",
-    "start_url": "https: //sdc-pwa-2019.glitch.me/",
-        "lang": "English",
+    "name": "Pruebas",
+    "short_name": "Pruebas",
+    "description": "Pruebas - GitHub P. - Domain",
+    "start_url": "http: //test.painsoftt.online",
+        "lang": "Spanish",
     "display": "standalone",
     "theme_color": "#3d3d3d",
 
     "background_color": "# f2f2f2",
     "orientation": "portrait",
     "icons": [{
-            "src": " /images/pigment - ico.png",
+            "src": " scr/img/nartgaroth.png",
             "sizes": "192 x192",
-            "type": "image / png"
-        },
-        {
-            "src": " /images/pigment - ico.png",
-            "sizes": "512 x512",
             "type": "image / png"
         }
     ]
